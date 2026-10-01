@@ -1,0 +1,13 @@
+{
+  "method": "Built-in image_gen",
+  "images": [
+    {
+      "file": "assets/language-learning.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: education website hero photo. Create a warm, realistic editorial photograph of four diverse children aged 8–14 and a female teacher learning together around a table in a bright modern Dubai classroom. Open books, language flashcards without legible text, natural expressions, respectful collaborative learning. Modest everyday clothing, warm daylight, navy and soft golden accents. Landscape composition, authentic candid photography, no logos, no text, no watermark. Fictional people."
+    },
+    {
+      "file": "assets/child-skills.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: child skills development website photograph. Three diverse children aged 9–13 collaborating with a male teacher on a wooden geometric puzzle at a classroom table in modern Dubai. Thoughtful expressions, discussing solutions, natural candid moment, modest casual clothing. Warm daylight, tasteful navy and teal details, realistic editorial photograph. Landscape composition. Fictional people. No text, logos or watermark."
+    }
+  ]
+}
