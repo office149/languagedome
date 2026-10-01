@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Language Dome — Language, Skills &amp; Fine Arts Training, Dubai</title>
+<meta name="description" content="Language Dome is a Dubai-licensed training institution offering language courses, skills development and fine arts training for children and teens aged 7 to 17.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316213e'/%3E%3Ccircle cx='16' cy='7.3' r='1.3' fill='%23F5A425'/%3E%3Crect x='15.4' y='8.6' width='1.2' height='2.4' fill='%23F5A425'/%3E%3Cpath d='M7 19A9 9 0 0 1 25 19Z' fill='%23f5a425'/%3E%3Crect x='8' y='19' width='16' height='4' fill='%230f1730'/%3E%3Crect x='6' y='23' width='20' height='1.8' rx='0.6' fill='%23F5A425'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#16213e;
+    --navy-2:#1f2d52;
+    --mango:#f5a425;
+    --turquoise:#2aa8a6;
+    --coral:#ef6f6c;
+    --sky:#eff3f7;
+    --paper:#f8f9fb;
+    --ink:#16213e;
+    --ink-soft:rgba(22,33,62,0.68);
+    --line:rgba(22,33,62,0.12);
+    --radius:18px;
+    --display:'Fraunces', serif;
+    --body:'Inter', system-ui, sans-serif;
+    --mono:'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+
+  /* ---------- NAV ---------- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(248,249,251,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:1120px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:1.15rem;letter-spacing:-0.01em;}
+  .brand .mark{width:30px;height:30px;flex:none;}
+  nav.links{display:flex;gap:32px;font-size:0.94rem;}
+  nav.links a{text-decoration:none;color:var(--ink-soft);transition:color .2s;}
+  nav.links a:hover{color:var(--ink);}
+  .nav-cta{
+    font-family:var(--body); font-weight:600; font-size:0.88rem;
+    background:var(--navy); color:#fff; padding:10px 20px; border-radius:999px;
+    text-decoration:none; white-space:nowrap;
+  }
+  .nav-toggle{display:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+    background:radial-gradient(120% 140% at 50% -10%, var(--navy-2) 0%, var(--navy) 55%, #0f1730 100%);
+    color:#fff;
+    padding:96px 0 64px;
+  }
+  .hero .wrap{position:relative; z-index:2; display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:center;}
+  .eyebrow{
+    font-family:var(--mono); font-size:0.75rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--mango); display:flex; align-items:center; gap:10px; margin-bottom:22px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--mango);display:inline-block;}
+  h1{
+    font-family:var(--display); font-weight:500; font-size:clamp(2.3rem, 4.4vw, 3.6rem);
+    line-height:1.06; letter-spacing:-0.01em; margin:0 0 22px;
+  }
+  h1 em{font-style:italic; color:var(--mango); font-weight:500;}
+  .hero p.lead{font-size:1.08rem; line-height:1.65; color:rgba(255,255,255,0.78); max-width:46ch; margin:0 0 34px;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{
+    font-family:var(--body); font-weight:600; font-size:0.94rem;
+    padding:14px 26px; border-radius:999px; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn-primary{background:var(--mango); color:var(--navy);}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(245,164,37,0.35);}
+  .btn-ghost{border:1px solid rgba(255,255,255,0.35); color:#fff;}
+  .btn-ghost:hover{background:rgba(255,255,255,0.08);}
+
+  .stats{display:flex; gap:34px; margin-top:44px; flex-wrap:wrap;}
+  .stat b{font-family:var(--display); font-size:1.5rem; display:block; font-weight:600;}
+  .stat span{font-size:0.78rem; color:rgba(255,255,255,0.6); font-family:var(--mono); letter-spacing:.03em;}
+
+  /* ---------- ORBIT SIGNATURE (grand dome) ---------- */
+  .orbit-stage{
+    position:relative; aspect-ratio:1/1; max-width:520px; margin:0 auto; width:100%;
+  }
+  .stage-glow{
+    position:absolute; inset:-10%; border-radius:50%;
+    background:radial-gradient(circle at 50% 50%, rgba(245,164,37,0.22), rgba(245,164,37,0) 62%);
+    filter:blur(2px);
+  }
+  .dome-illustration{
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:58%; display:flex; flex-direction:column; align-items:center;
+  }
+  .floor-glow{
+    width:120%; height:22px; margin-top:-6px;
+    background:radial-gradient(ellipse at center, rgba(245,164,37,0.45), rgba(245,164,37,0) 72%);
+    filter:blur(4px);
+  }
+  .finial{
+    width:3px; height:28px; background:linear-gradient(#ffe3ab, var(--mango));
+    box-shadow:0 0 14px rgba(245,164,37,0.7);
+  }
+  .finial-ball{
+    width:12px; height:12px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #ffe9c2, var(--mango) 60%, #b97613 100%);
+    box-shadow:0 0 18px rgba(245,164,37,0.8);
+    margin-bottom:-2px;
+  }
+  .dome-cap{
+    width:100%; aspect-ratio:2/1.15;
+    border-radius:50% 50% 0 0 / 100% 100% 0 0;
+    background:
+      repeating-conic-gradient(from 180deg at 50% 100%,
+        #ffcf6b 0deg 3.2deg, #f5a425 3.2deg 8deg, #d9891f 8deg 9.5deg,
+        #f5a425 9.5deg 14.4deg, #ffcf6b 14.4deg 16deg
+      );
+    box-shadow:
+      0 -18px 50px rgba(245,164,37,0.4),
+      inset 0 18px 34px rgba(255,255,255,0.28),
+      inset 0 -10px 24px rgba(90,54,4,0.35);
+    position:relative;
+  }
+  .dome-cap::after{
+    content:""; position:absolute; inset:0; border-radius:inherit;
+    background:radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.35), rgba(255,255,255,0) 55%);
+    mix-blend-mode:overlay;
+  }
+  .dome-drum{
+    width:112%; aspect-ratio:5.5/1;
+    background:linear-gradient(180deg, #24345f, #16213e);
+    border-top:2px solid rgba(245,164,37,0.55);
+    box-shadow:0 22px 40px rgba(0,0,0,0.4);
+    display:flex; align-items:center; justify-content:space-evenly;
+    padding:0 6%;
+  }
+  .drum-arch{
+    width:13%; height:62%; border-radius:50% 50% 0 0;
+    background:rgba(245,164,37,0.16); border:1px solid rgba(245,164,37,0.35); border-bottom:none;
+  }
+  .dome-base{
+    width:128%; aspect-ratio:21/1;
+    background:linear-gradient(180deg, #0f1730, #0a0f22);
+    border-radius:3px; box-shadow:0 10px 24px rgba(0,0,0,0.5);
+  }
+  .ring{position:absolute; border:1px dashed rgba(245,164,37,0.22); border-radius:50%;}
+  .ring.r1{inset:10%;}
+  .ring.r2{inset:-2%;}
+  .orbiter{
+    position:absolute; width:100%; height:100%; top:0; left:0;
+    animation:spin var(--dur,26s) linear infinite;
+  }
+  .orbiter.reverse{animation-direction:reverse;}
+  @keyframes spin{from{transform:rotate(0deg);} to{transform:rotate(360deg);}}
+  .letter{
+    position:absolute; width:52px; height:52px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:600; font-size:1.3rem;
+    color:var(--navy); box-shadow:0 10px 24px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.15);
+  }
+  .letter span{animation:counterspin var(--dur,26s) linear infinite; animation-direction:reverse;}
+  .orbiter.reverse .letter span{animation-direction:normal;}
+  @keyframes counterspin{from{transform:rotate(0deg);} to{transform:rotate(360deg);}}
+  .l1{background:var(--mango); top:-2%; left:50%; transform:translate(-50%,0);}
+  .l2{background:var(--turquoise); color:#fff; top:50%; right:-2%; transform:translate(0,-50%);}
+  .l3{background:var(--coral); color:#fff; bottom:-2%; left:22%;}
+  .l4{background:#fff; top:18%; left:-4%;}
+  .sparkle{position:absolute; border-radius:50%; background:#fff; opacity:.6; animation:twinkle 3.4s ease-in-out infinite;}
+  @keyframes twinkle{0%,100%{opacity:.15; transform:scale(0.8);} 50%{opacity:.9; transform:scale(1.15);}}
+  @media (prefers-reduced-motion: reduce){
+    .orbiter, .letter span, .sparkle{animation:none;}
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  section{padding:96px 0;}
+  .section-head{max-width:640px; margin:0 0 56px;}
+  .section-head .eyebrow{color:var(--turquoise);}
+  .section-head .eyebrow::before{background:var(--turquoise);}
+  h2{font-family:var(--display); font-weight:500; font-size:clamp(1.8rem,3vw,2.5rem); letter-spacing:-0.01em; margin:0 0 14px; line-height:1.15;}
+  .section-head p{color:var(--ink-soft); font-size:1.02rem; line-height:1.6; margin:0;}
+
+  /* ---------- PROGRAMS ---------- */
+  .programs{background:var(--sky);}
+  .card-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .p-card{
+    background:#fff; border-radius:var(--radius); padding:32px 28px; border:1px solid var(--line);
+    display:flex; flex-direction:column; gap:16px;
+  }
+  .p-card .num{font-family:var(--mono); font-size:0.75rem; color:var(--ink-soft);}
+  .p-card .icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;}
+  .p-card:nth-child(1) .icon{background:rgba(245,164,37,0.15);}
+  .p-card:nth-child(2) .icon{background:rgba(42,168,166,0.15);}
+  .p-card:nth-child(3) .icon{background:rgba(239,111,108,0.15);}
+  .p-card h3{font-family:var(--display); font-weight:600; font-size:1.28rem; margin:0;}
+  .p-card p{margin:0; color:var(--ink-soft); line-height:1.6; font-size:0.96rem;}
+  .p-card ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px;}
+  .p-card li{font-size:0.9rem; color:var(--ink); display:flex; gap:8px; align-items:baseline;}
+  .p-card li::before{content:"—"; color:var(--ink-soft); flex:none;}
+
+  /* ---------- BENEFITS / MARKETING ---------- */
+  .benefits{background:#fff;}
+  .benefit-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .b-card{
+    border:1px solid var(--line); border-radius:16px; padding:26px 24px;
+    display:flex; flex-direction:column; gap:12px; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .b-card:hover{transform:translateY(-3px); box-shadow:0 16px 34px rgba(22,33,62,0.08); border-color:transparent;}
+  .b-icon{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;}
+  .b-card h4{margin:0; font-family:var(--display); font-weight:600; font-size:1.06rem;}
+  .b-card p{margin:0; color:var(--ink-soft); font-size:0.92rem; line-height:1.6;}
+
+  /* ---------- FORMATS ---------- */
+  .formats .wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center;}
+  .format-list{display:flex; flex-direction:column;}
+  .format-row{display:flex; gap:20px; padding:22px 0; border-top:1px solid var(--line);}
+  .format-row:last-child{border-bottom:1px solid var(--line);}
+  .format-row .tag{
+    font-family:var(--mono); font-size:0.72rem; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--turquoise); flex:none; width:120px; padding-top:3px;
+  }
+  .format-row h4{margin:0 0 6px; font-family:var(--display); font-weight:600; font-size:1.08rem;}
+  .format-row p{margin:0; color:var(--ink-soft); font-size:0.92rem; line-height:1.6;}
+  .audience-card{
+    background:var(--navy); color:#fff; border-radius:var(--radius); padding:40px;
+  }
+  .audience-card .eyebrow{color:var(--mango);}
+  .audience-card .eyebrow::before{background:var(--mango);}
+  .audience-card h3{font-family:var(--display); font-weight:600; font-size:1.5rem; margin:14px 0 18px;}
+  .audience-card p{color:rgba(255,255,255,0.72); line-height:1.65; margin:0 0 22px; font-size:0.96rem;}
+  .chip-row{display:flex; flex-wrap:wrap; gap:10px;}
+  .chip{
+    font-family:var(--mono); font-size:0.76rem; padding:8px 14px; border-radius:999px;
+    border:1px solid rgba(255,255,255,0.24); color:rgba(255,255,255,0.85);
+  }
+
+  /* ---------- CREDENTIALS ---------- */
+  .credentials{background:var(--sky);}
+  .cred-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .cred-item{background:#fff; border:1px solid var(--line); border-radius:14px; padding:22px 20px;}
+  .cred-item .k{font-family:var(--mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); margin-bottom:8px;}
+  .cred-item .v{font-family:var(--display); font-weight:600; font-size:1.15rem;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--navy); color:#fff;}
+  .contact .wrap{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  .contact h2{color:#fff;}
+  .contact .section-head p{color:rgba(255,255,255,0.7);}
+  .contact-details{display:flex; flex-direction:column; gap:22px;}
+  .cd-row{display:flex; gap:16px; align-items:flex-start; padding:20px 0; border-top:1px solid rgba(255,255,255,0.14);}
+  .cd-row .k{font-family:var(--mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:.06em; color:var(--mango); width:110px; flex:none; padding-top:3px;}
+  .cd-row .v a{color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.3);}
+  form.enroll{display:flex; flex-direction:column; gap:14px; background:rgba(255,255,255,0.05); padding:32px; border-radius:var(--radius); border:1px solid rgba(255,255,255,0.14);}
+  form.enroll label{font-family:var(--mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:.06em; color:rgba(255,255,255,0.6);}
+  form.enroll input, form.enroll select, form.enroll textarea{
+    width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.06); color:#fff; font-family:var(--body); font-size:0.95rem;
+  }
+  form.enroll input::placeholder, form.enroll textarea::placeholder{color:rgba(255,255,255,0.35);}
+  form.enroll button{margin-top:6px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:36px 0; background:#0f1730; color:rgba(255,255,255,0.55); font-size:0.85rem;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .orbit-stage{margin-top:20px; max-width:380px;}
+    .card-grid{grid-template-columns:1fr;}
+    .benefit-grid{grid-template-columns:repeat(2,1fr);}
+    .formats .wrap{grid-template-columns:1fr;}
+    .cred-grid{grid-template-columns:repeat(2,1fr);}
+    .contact .wrap{grid-template-columns:1fr;}
+    nav.links{display:none;}
+  }
+
+  @media (max-width:640px){
+    .wrap{padding:0 18px;}
+    .nav{padding:14px 18px;}
+    .brand{font-size:1.02rem; gap:8px;}
+    .brand .mark{width:26px; height:26px;}
+    .nav-cta{padding:9px 15px; font-size:0.82rem;}
+    section{padding:60px 0;}
+    .hero{padding:52px 0 40px;}
+    h1{font-size:clamp(1.9rem, 8vw, 2.3rem);}
+    .hero p.lead{font-size:0.98rem;}
+    .hero-ctas .btn{padding:12px 20px; font-size:0.88rem;}
+    .stats{gap:20px 28px; margin-top:32px;}
+    .stat b{font-size:1.2rem;}
+    .orbit-stage{max-width:280px;}
+    .letter{width:38px; height:38px; font-size:1rem;}
+    .section-head{margin-bottom:38px;}
+    .benefit-grid{grid-template-columns:1fr;}
+    .format-row{flex-direction:column; gap:6px; padding:18px 0;}
+    .format-row .tag{width:auto;}
+    .audience-card{padding:28px 24px;}
+    .cred-grid{grid-template-columns:1fr;}
+    form.enroll{padding:22px;}
+    .cd-row{flex-direction:column; gap:4px;}
+    .cd-row .k{width:auto;}
+    footer .wrap{flex-direction:column; text-align:center;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 32 32">
+        <rect width="32" height="32" rx="7" fill="#16213e"/>
+        <circle cx="16" cy="7.3" r="1.3" fill="#F5A425"/>
+        <rect x="15.4" y="8.6" width="1.2" height="2.4" fill="#F5A425"/>
+        <path d="M7 19 A9 9 0 0 1 25 19 Z" fill="url(#domeGradNav)"/>
+        <path d="M16 19 L16 10" stroke="#c97f1a" stroke-width="0.6" opacity="0.55"/>
+        <path d="M16 19 L22.36 12.64" stroke="#c97f1a" stroke-width="0.6" opacity="0.45"/>
+        <path d="M16 19 L9.64 12.64" stroke="#c97f1a" stroke-width="0.6" opacity="0.45"/>
+        <rect x="8" y="19" width="16" height="4" fill="#0f1730" stroke="#F5A425" stroke-width="0.6"/>
+        <rect x="6" y="23" width="20" height="1.8" rx="0.6" fill="#F5A425"/>
+        <defs>
+          <linearGradient id="domeGradNav" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffcf6b"/>
+            <stop offset="1" stop-color="#d9891f"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      Language Dome
+    </div>
+    <nav class="links">
+      <a href="#programs">Programs</a>
+      <a href="#formats">How it works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Book a trial class</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Dubai · Licensed Training Institution · Ages 7–17</div>
+      <h1>Under one dome,<br>every <em>language</em> finds its voice.</h1>
+      <p class="lead">Language Dome brings language training, skills development, and fine arts together in one licensed Dubai institution — built exclusively for children and teens aged 7 to 17.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#contact">Book a trial class</a>
+        <a class="btn btn-ghost" href="#programs">Explore programs</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>7–17</b><span>AGE RANGE</span></div>
+        <div class="stat"><b>3</b><span>CORE DISCIPLINES</span></div>
+        <div class="stat"><b>EN / TR / AR</b><span>LANGUAGES TAUGHT</span></div>
+      </div>
+    </div>
+    <div class="orbit-stage" aria-hidden="true">
+      <div class="stage-glow"></div>
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="sparkle" style="width:4px;height:4px;top:12%;left:20%;"></div>
+      <div class="sparkle" style="width:3px;height:3px;top:26%;left:78%;animation-delay:.8s;"></div>
+      <div class="sparkle" style="width:5px;height:5px;top:64%;left:8%;animation-delay:1.6s;"></div>
+      <div class="sparkle" style="width:3px;height:3px;top:8%;left:60%;animation-delay:2.2s;"></div>
+      <div class="orbiter" style="--dur:24s;">
+        <div class="letter l1"><span>A</span></div>
+        <div class="letter l3"><span>و</span></div>
+      </div>
+      <div class="orbiter reverse" style="--dur:32s;">
+        <div class="letter l2"><span>ا</span></div>
+        <div class="letter l4"><span>Ç</span></div>
+      </div>
+      <div class="dome-illustration">
+        <div class="finial-ball"></div>
+        <div class="finial"></div>
+        <div class="dome-cap"></div>
+        <div class="dome-drum">
+          <div class="drum-arch"></div>
+          <div class="drum-arch"></div>
+          <div class="drum-arch"></div>
+        </div>
+        <div class="dome-base"></div>
+        <div class="floor-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What we teach</div>
+      <h2>Three disciplines, one curriculum philosophy.</h2>
+      <p>Every program is built around the same idea: confident expression, whether spoken, social, or drawn on paper.</p>
+    </div>
+    <div class="card-grid">
+      <div class="p-card">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 12h10M4 19h16" stroke="#F5A425" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="num">01 / Language Training</div>
+        <h3>Foreign Language Courses</h3>
+        <p>Structured, level-based courses that build real conversational confidence, not just vocabulary lists.</p>
+        <ul>
+          <li>English, beginner to advanced</li>
+          <li>Turkish for beginners to fluent speakers</li>
+          <li>Arabic, spoken and written</li>
+        </ul>
+      </div>
+      <div class="p-card">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2AA8A6" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#2AA8A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="num">02 / Child Skills Development</div>
+        <h3>Growing Beyond the Classroom</h3>
+        <p>Programs designed around the skills schools rarely have time to teach directly.</p>
+        <ul>
+          <li>Communication and public speaking</li>
+          <li>Creativity and problem-solving</li>
+          <li>Leadership and personal development</li>
+        </ul>
+      </div>
+      <div class="p-card">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20L15 9l1 1L5 21H4v-1z" stroke="#EF6F6C" stroke-width="2" stroke-linejoin="round"/><path d="M14 5l3 3" stroke="#EF6F6C" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="num">03 / Fine Arts Training</div>
+        <h3>Drawing, Painting &amp; Craft</h3>
+        <p>Hands-on studio sessions that give students a visual language alongside a spoken one.</p>
+        <ul>
+          <li>Drawing and sketching fundamentals</li>
+          <li>Painting techniques and materials</li>
+          <li>Creative workshops and seasonal projects</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why families choose us</div>
+      <h2>Everything a growing student needs, under one roof.</h2>
+      <p>Parents juggle enough logistics already. Language Dome replaces three separate providers with one licensed institution, one schedule, and one point of contact.</p>
+    </div>
+    <div class="benefit-grid">
+      <div class="b-card">
+        <div class="b-icon" style="background:rgba(245,164,37,0.15);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 4l2.4 5.4L20 12l-5.6 2.6L12 20l-2.4-5.4L4 12l5.6-2.6L12 4z" stroke="#F5A425" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Small class sizes</h4>
+        <p>Low student-to-teacher ratios so every child actually gets speaking time, not just seat time.</p>
+      </div>
+      <div class="b-card">
+        <div class="b-icon" style="background:rgba(42,168,166,0.15);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="#2AA8A6" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Progress you can see</h4>
+        <p>Regular parent updates on language level, participation, and skills milestones — no guessing how it's going.</p>
+      </div>
+      <div class="b-card">
+        <div class="b-icon" style="background:rgba(239,111,108,0.15);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="#EF6F6C" stroke-width="1.8"/><path d="M4 10h16M8 3v4M16 3v4" stroke="#EF6F6C" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Flexible scheduling</h4>
+        <p>Weekday, weekend, in-studio, or online — book around school hours, not the other way around.</p>
+      </div>
+      <div class="b-card">
+        <div class="b-icon" style="background:rgba(245,164,37,0.15);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z" stroke="#F5A425" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Licensed &amp; DET-regulated</h4>
+        <p>Operating under Dubai Department of Economy and Tourism License No. 1353863 — not a home-run tutoring setup.</p>
+      </div>
+      <div class="b-card">
+        <div class="b-icon" style="background:rgba(42,168,166,0.15);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="3" stroke="#2AA8A6" stroke-width="1.8"/><circle cx="17" cy="9" r="3" stroke="#2AA8A6" stroke-width="1.8"/><path d="M2 20c0-3 2.7-5 6-5s6 2 6 5M12 20c0-3 2.7-5 6-5" stroke="#2AA8A6" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Multilingual teaching team</h4>
+        <p>Instructors who teach English, Turkish, and Arabic across genuine bilingual and trilingual classrooms.</p>
+      </div>
+      <div class="b-card">
+        <div class="b-icon" style="background:rgba(239,111,108,0.15);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#EF6F6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>No-commitment trial class</h4>
+        <p>Sit in on a real session before enrolling — you and your child decide together if it's the right fit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="formats" id="formats">
+  <div class="wrap">
+    <div>
+      <div class="section-head" style="margin-bottom:38px;">
+        <div class="eyebrow">How it works</div>
+        <h2>Learn the way that fits your family.</h2>
+      </div>
+      <div class="format-list">
+        <div class="format-row">
+          <div class="tag">In person</div>
+          <div><h4>Classroom-based sessions</h4><p>Small-group, in-studio classes across language, skills, and arts programs.</p></div>
+        </div>
+        <div class="format-row">
+          <div class="tag">Online</div>
+          <div><h4>Live online learning</h4><p>The same curriculum, delivered remotely for families across the UAE and GCC.</p></div>
+        </div>
+        <div class="format-row">
+          <div class="tag">Every subject</div>
+          <div><h4>Native-speaker instructors</h4><p>Language, skills, and arts classes are all led by native or native-level speakers — not generalists covering multiple subjects.</p></div>
+        </div>
+        <div class="format-row">
+          <div class="tag">Seasonal</div>
+          <div><h4>Holiday camps &amp; workshops</h4><p>Short, intensive camps during school breaks combining all three disciplines.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="audience-card" id="about">
+      <div class="eyebrow">Who we work with</div>
+      <h3>Families across Dubai, for students aged 7–17.</h3>
+      <p>Our community is expatriate and local families in Dubai and the Northern Emirates raising children and teens between 7 and 17. Whatever the subject — language, skills, or arts — we put a native or native-level speaker in front of the class, not a generalist.</p>
+      <div class="chip-row">
+        <span class="chip">Ages 7–17</span>
+        <span class="chip">Families in Dubai</span>
+        <span class="chip">Northern Emirates</span>
+        <span class="chip">Native speakers, every field</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="credentials">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Credentials</div>
+      <h2>A licensed institution, built to last.</h2>
+      <p>Language Dome for Child Skills Development Training L.L.C. operates under a Dubai Department of Economy and Tourism commercial license.</p>
+    </div>
+    <div class="cred-grid">
+      <div class="cred-item"><div class="k">License No.</div><div class="v">1353863</div></div>
+      <div class="cred-item"><div class="k">Legal type</div><div class="v">LLC</div></div>
+      <div class="cred-item"><div class="k">Established</div><div class="v">July 2024</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="section-head">
+        <div class="eyebrow">Get started</div>
+        <h2>Book a trial class for your child.</h2>
+        <p>Tell us which program you're interested in, and our team will get back to you with class times and pricing.</p>
+      </div>
+      <div class="contact-details">
+        <div class="cd-row">
+          <div class="k">Phone</div>
+          <div class="v"><a href="tel:+971551165326">+971 55 116 5326</a></div>
+        </div>
+        <div class="cd-row">
+          <div class="k">Email</div>
+          <div class="v"><a href="mailto:office@languagedome.com">office@languagedome.com</a></div>
+        </div>
+        <div class="cd-row">
+          <div class="k">Location</div>
+          <div class="v">Ras Al Khor Industrial Area 2, Dubai, UAE</div>
+        </div>
+      </div>
+    </div>
+    <form class="enroll" action="mailto:office@languagedome.com" method="post" enctype="text/plain">
+      <label for="name">Full name</label>
+      <input id="name" name="name" type="text" placeholder="Your name" required>
+      <label for="program">Program</label>
+      <select id="program" name="program">
+        <option>Language Training</option>
+        <option>Child Skills Development</option>
+        <option>Fine Arts Training</option>
+        <option>Not sure yet</option>
+      </select>
+      <label for="contact-info">Phone or email</label>
+      <input id="contact-info" name="contact" type="text" placeholder="How should we reach you?" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="3" placeholder="Child's age (7–17), preferred schedule, anything else"></textarea>
+      <button class="btn btn-primary" type="submit">Send enquiry</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year"></span> Language Dome for Child Skills Development Training L.L.C. — Dubai, UAE</div>
+    <div>DET License No. 1353863</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
