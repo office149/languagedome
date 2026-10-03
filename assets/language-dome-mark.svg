@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+<title>Language Dome — language and connection</title>
+<defs><clipPath id="globe"><circle cx="40" cy="40" r="34"/></clipPath></defs>
+<g clip-path="url(#globe)">
+<path d="M40 6A34 34 0 0 0 40 74V62C32 61 29 57 31 53L34 48L30 45L35 42L32 38C30 35 27 34 27 31C26 21 32 12 40 6Z" fill="#16213e"/>
+<path d="M40 6V74M40 6C65 21 65 59 40 74M40 40H74M38 23C49 25 61 23 68 19M38 57C49 55 61 57 68 61" stroke="#16213e" stroke-width="2.5" stroke-linecap="round"/>
+</g><circle cx="40" cy="40" r="34" stroke="#16213e" stroke-width="2.7"/>
+<path d="M16 15A34 34 0 0 1 31 7" stroke="#b88738" stroke-width="3.5" stroke-linecap="round"/>
+</svg>
