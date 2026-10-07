@@ -383,3 +383,6 @@ footer{padding-bottom:100px}.photo-note{font-size:.68rem;line-height:1.5;opacity
 .brand{gap:13px;flex:none}.brand .mark{width:58px;height:58px}.brand-text{gap:7px}.brand-name{font-family:var(--display);font-weight:500;font-size:1.55rem;line-height:1;letter-spacing:-.055em;color:var(--navy)}.brand-tagline{display:flex;align-items:center;gap:7px;font-size:.59rem;letter-spacing:.015em;color:#526079;white-space:nowrap}.brand-tagline::before{content:"";display:block;width:17px;height:1.5px;background:#f5a425;flex:none}.nav{gap:24px}.nav.links{gap:24px}
 @media(max-width:1000px) and (min-width:861px){nav.links{gap:18px;font-size:.86rem}.nav{gap:18px}.nav-cta{padding:10px 15px}}
 @media(max-width:640px){.brand{gap:9px}.brand .mark{width:45px;height:45px}.brand-name{font-size:1.32rem}.brand-tagline{font-size:.51rem;gap:5px}.brand-tagline::before{width:12px}.brand-text{gap:6px}.nav{gap:14px}}
+
+/* Wordmark without subtitle. */
+.brand-text{justify-content:center;gap:0}

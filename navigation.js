@@ -29,7 +29,7 @@ enquiryDialog.innerHTML = `
     <input id="enquiry-phone" name="Phone" type="tel" autocomplete="tel" maxlength="40" required>
     <div class="enquiry-columns"><div><label for="enquiry-course">Course</label>
     <select id="enquiry-course" name="Course"><option>English for Beginners</option><option>Turkish for Beginners</option><option>Arabic for Beginners</option><option>Child Skills Development</option></select></div>
-    <div><label for="enquiry-age">Child’s age (optional)</label><input id="enquiry-age" name="Child age" type="number" min="7" max="17"></div></div>
+    <div><label for="enquiry-age">Child’s age (optional)</label><input id="enquiry-age" name="Child age" type="number" min="0"></div></div>
     <label for="enquiry-format">Language learning format</label>
     <select id="enquiry-format" name="Learning format"><option>In person in Dubai</option><option>Live online</option><option>Please advise me</option></select>
     <label for="enquiry-message">Message (optional)</label>
